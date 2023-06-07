@@ -1,0 +1,389 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Encabezado */
+    /* Estilos generales del encabezado */
+header {
+    background-color: #2563EB;
+    padding: 10px 0;
+  }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    
+  }
+
+  .fixed-header + .section {
+    margin-top: 100px; /* Ajusta el valor según el tamaño de tu encabezado */
+  }    
+
+  .navbar.custom-navbar {
+    background-color: #2563EB; /* Reemplaza #FF0000 por el color hexadecimal que desees */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #2563EB;
+  }
+  
+  .navbar-item {
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .navbar-item:hover {
+    color: #A5B4FC;
+  }
+  
+  .navbar-burger {
+    color: #fff;
+  }
+  
+  /* Estilos para el logotipo */
+  .navbar-item img {
+    max-height: 3rem;
+    height: "50%";
+    margin-right: "50%";
+  }
+  
+  /* Estilos para el título */
+  .navbar-item h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Estilos para el menú de navegación */
+  .navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-start {
+    display: flex;
+  }
+  
+  .navbar-item:not(:last-child) {
+    margin-right: 10px;
+  }
+    
+  
+  /* Barra de navegación */
+  nav {
+    background-color: #CCCCCC;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Secciones */
+  section {
+    padding: 20px;    
+    transition-property: height, transform; /* Transición suave para la altura */
+    transition-duration: 0.5s; /* Duración de la transición */
+    transition-timing-function: ease; /* Función de aceleración */
+    overflow: hidden; /* Ocultar el contenido que exceda la altura */
+  }
+  
+  section h2 {
+    margin-top: 0;
+  }
+  
+  .section.active {
+    padding: 40px;
+    height: auto; /* Altura de la sección activa */
+    transform: translateY(-25px); /* Desplazar el contenido hacia abajo */
+  }
+
+  .section.inactive{
+    height: 110px;
+    transform: translateY(0);
+  }
+  
+  /* Paleta de colores profesionales */
+  section#conocimientos {
+    background-color: #EFEFEF;
+  }
+  
+  section#cursos {
+    background-color: #F7F7F7;
+  }
+  
+  section#habilidades {
+    background-color: #F2F2F2;
+  }
+  
+  /* Acentos de color */
+  a {
+    color: #CC0000;
+  }
+  
+  a:hover {
+    color: #FF3333;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #333333;
+    color: #000000;
+    padding: 10px;
+    text-align: center;    
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+  .footer{
+    padding: 25px;
+  }
+
+  /* En styles.css */
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Estilos adicionales para resaltar el enlace activo */
+  nav ul li a.active {
+    color: #CC0000;
+    font-weight: bold;
+  }
+
+  /*Estilo del botón de volver arriba*/
+  #btn-volver-arriba {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #A5B4FC;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #btn-volver-arriba:hover {
+    background-color: #A5B4FC;
+  }
+  
+  #btn-volver-arriba i {
+    font-size: 20px;
+  }
+  
+  .about-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-text {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .about-images {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-images img {
+    width: 200px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+    margin: 0 10px; /* Espacio entre las imágenes */
+  }
+  
+ 
+  /* Estilos para la sección de conocimientos */
+#conocimientos {
+    padding: 3rem 0;
+  }
+  
+  #conocimientos .title {
+    margin-bottom: 2rem;
+  }
+  
+  .knowledge-group {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .knowledge-group .subtitle {
+    color: #363636;
+    margin-bottom: 1rem;
+    background-color: #cacaca;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  
+  .knowledge-group ul {
+    font-size: 1.2rem; /* Ajusta el tamaño de fuente según tu preferencia */
+    text-align: center; /* Centra los elementos de la lista */
+  }
+  
+  .knowledge-group ul li {
+    margin-bottom: 0.5rem; /* Espacio entre los elementos de la lista */
+  }
+  
+  
+  .knowledge-group li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .knowledge-group li i {
+    margin-right: 0.5rem;
+  }
+  
+  /*Estilos sección de Habilidades*/
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .skill-bubble {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-bubble:hover {
+    transform: scale(1.1);
+  }
+  
+  .skill-bubble i {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+  
+  .skill-bubble h3 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+  }
+
+  #sobre-mi {
+    background-color: #f5f5f5;
+    padding: 3rem;
+  }
+  
+  #sobre-mi .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  #sobre-mi h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #sobre-mi p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #sobre-mi .content {
+      padding: 1.5rem;
+    }
+    
+    #sobre-mi h2 {
+      font-size: 2rem;      
+    }
+    
+    #sobre-mi p {
+      font-size: 1rem;
+    }
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .about-images img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .repos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.repo-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #6e5494;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.repo-name {
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.repo-description {
+  margin-bottom: 10px;
+}
+
+.repo-link {
+  color: lightblue;
+}
+
+  
+  
